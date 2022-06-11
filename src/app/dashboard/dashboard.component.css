@@ -1,0 +1,15 @@
+.dashboard-full-width {
+    width: 100%;
+}
+
+.dashboard-area {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 5px;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.dashboard-panel {
+    margin: 5px;
+}

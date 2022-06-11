@@ -1,0 +1,16 @@
+.home-area {
+    height: 100vh;
+}
+
+.home-container {
+    height: calc(100% - 4rem);
+}
+
+.side-nav-area {
+    display: grid;
+    padding: 1rem;
+}
+
+.side-nav-button {
+    margin: 1rem;
+}

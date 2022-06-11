@@ -1,0 +1,19 @@
+<div class="home-area">
+    <mat-toolbar>
+        <span>Patient Symptoms Screen</span>
+    </mat-toolbar>
+    <mat-drawer-container #drawer class="home-container" hasBackdrop="false">
+        <mat-drawer mode="side" opened>
+            <div class="side-nav-area">
+                <button mat-raised-button color="primary" type="Location History" class="side-nav-button">Location
+                    History</button>
+                <button mat-raised-button color="primary" type="Location History" class="side-nav-button"
+                    (click)="signout()">Sign
+                    out</button>
+            </div>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-dashboard></app-dashboard>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

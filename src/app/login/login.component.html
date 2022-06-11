@@ -1,0 +1,17 @@
+<mat-card>
+    <form class="login-form" [formGroup]="form" (ngSubmit)="login(form)">
+        <mat-form-field class="login-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="username" formControlName="username" />
+        </mat-form-field>
+
+        <mat-form-field class="login-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="password" type="password" formControlName="password" />
+        </mat-form-field>
+        <div mat-dialog-actions>
+            <button mat-raised-button color="primary" type="submit">login</button>
+        </div>
+        <mat-error *ngIf="form.invalid">Invalid username or password!</mat-error>
+    </form>
+</mat-card>

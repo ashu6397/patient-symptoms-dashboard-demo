@@ -1,0 +1,44 @@
+<div class="dashboard-area">
+    <mat-card class="dashboard-panel">
+        <form class="dashboard-form" [formGroup]="form" (ngSubmit)="showChart(form)">
+            <mat-form-field class="dashboard-full-width">
+                <mat-label>Symptoms</mat-label>
+                <input matInput placeholder="symptoms" formControlName="symptoms" />
+            </mat-form-field>
+
+            <mat-form-field class="dashboard-full-width">
+                <mat-label>Location</mat-label>
+                <input matInput placeholder="location" formControlName="location" />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>From</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <mat-label>To</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit">Add</button>
+                <button mat-raised-button color="red" type="reset">Cancel</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+
+    <mat-card class="dashboard-panel">
+        <div style="display: block;">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                [legend]="barChartLegend" [type]="barChartType">
+            </canvas>
+        </div>
+    </mat-card>
+</div>
